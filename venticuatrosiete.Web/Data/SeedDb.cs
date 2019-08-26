@@ -49,16 +49,16 @@ namespace venticuatrosiete.Web.Data
 
             if (!_context.Products.Any())
             {
-                this.AddProduct("First Product", user);
-                this.AddProduct("Second Product", user);
-                this.AddProduct("Third Product", user);
+                this.AddProduct("Big mac", "MacDonal",user);
+                this.AddProduct("Redbull", "el chino",user);
+                this.AddProduct("Frijoles", "juancho",user);
                 await _context.SaveChangesAsync();
             }
 
             
 
         }
-        private void AddProduct(string name, User user)
+        private void AddProduct(string name, string delivery, User user)
         {
             _context.Products.Add(new Product
             {
@@ -66,6 +66,7 @@ namespace venticuatrosiete.Web.Data
                 Price = _random.Next(100),
                 IsAvailabe = true,
                 Stock = _random.Next(100),
+                Delivery = delivery,
                 User = user
             });
         }

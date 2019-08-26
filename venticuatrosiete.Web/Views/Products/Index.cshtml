@@ -19,6 +19,9 @@
                 @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Delivery)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
             <th>
@@ -46,6 +49,9 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Delivery)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.ImageUrl)
             </td>
             <td>
@@ -61,8 +67,8 @@
                 @Html.DisplayFor(modelItem => item.Stock)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a> 
-                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a> 
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
                 <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
             </td>
         </tr>

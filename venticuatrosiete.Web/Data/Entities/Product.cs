@@ -17,6 +17,11 @@ namespace venticuatrosiete.Web.Data.Entities
         [Display(Name = "Image")]
         public string ImageUrl { get; set; }
 
+        [MaxLength(50, ErrorMessage = "The field {0} only can contain a maximum {1} characters")]
+        [Required]
+        [Display(Name = "Delivery")]
+        public string Delivery { get; set; }
+
         [Display(Name = "Last Purchase")]
         public DateTime? LastPurchase { get; set; }
 
